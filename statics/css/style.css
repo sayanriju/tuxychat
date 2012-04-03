@@ -1,0 +1,56 @@
+body {
+	font-family: helvetica, sans;
+	color: #444444;
+    font-size: 12pt;
+}
+
+h1 {
+    font-size: 16pt;
+    height: 30px;
+}
+
+a {
+	color: #444444;
+}
+
+.error {
+	color: red;
+    margin-top: 2px;
+}
+
+#shareText {
+    text-align: right;
+    height: 20px;
+}
+
+#chatLog {
+	border: 1px solid black;
+	width: 100%;
+	overflow-y: auto;
+}
+
+#chatBox {
+	width: 100%;
+	border: 1px solid #444444;
+    margin-top: 2px;
+    height: 20px;
+}
+
+.join {
+	color: blue;
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.msg {
+	font-size: 11pt;
+}
+
+.myMsg {
+	color: green;
+	font-size: 11pt;
+}
+
+.email {
+	font-weight: bold;
+}

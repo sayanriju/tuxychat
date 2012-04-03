@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Tuxy Chat</title>
+		<link rel="stylesheet" href="css/style.css"></link>
+	</head>
+	<body>
+		<h1>Welcome, {{.User.Email}}!</h1>
+		{{if .Unknown}}
+		<span class="error">Unknown Room ID!</span>
+		<p>
+		{{end}}
+		<form action="/join" method="post">
+			<label for="roomId">Room ID:</label>
+			<input id="roomId" name="roomId">
+			{{if .Missing}}
+			<span class="error">Missing!</span>
+			{{end}}
+			<input type="submit" value="Join">
+			<a href="/new">New Room</a>
+		</form>
+	</body>
+</html>
