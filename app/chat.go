@@ -52,7 +52,7 @@ func joinRoom(c appengine.Context, roomId string, email string) (string, error) 
 	}
 
 	publish(c, roomId, email, "")
-	return channel.Create(c, email)
+	return channel.Create(c, email+roomId)
 }
 
 func publish(c appengine.Context, roomId string, email string, message string) error {
@@ -69,9 +69,9 @@ func publish(c appengine.Context, roomId string, email string, message string) e
 		}
 
 		if message == "" {
-			channel.SendJSON(c, user, command{"join", email, message})
+			channel.SendJSON(c, user+roomId, command{"join", email, message})
 		} else {
-			channel.SendJSON(c, user, command{"msg", email, message})
+			channel.SendJSON(c, user+roomId, command{"msg", email, message})
 		}
 	}
 
