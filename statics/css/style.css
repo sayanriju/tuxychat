@@ -18,6 +18,11 @@ a {
     margin-top: 2px;
 }
 
+#footer {
+	font-size: 10pt;
+	margin-top: 10px;
+}
+
 #shareText {
     text-align: right;
     height: 20px;

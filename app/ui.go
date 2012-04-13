@@ -87,6 +87,5 @@ func msg(w http.ResponseWriter, r *http.Request) {
 }
 
 func parseTemplates() {
-	tmpls = template.New("tmpls")
-	template.Must(tmpls.ParseGlob("templates/*"))
+	tmpls = template.Must(template.ParseGlob("templates/*"))
 }
