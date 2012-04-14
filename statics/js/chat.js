@@ -17,7 +17,7 @@ $(function() {
         active = true
     })
 
-	var ch = new goog.appengine.Channel(token)
+	var ch = new goog.appengine.Channel($('#token').val())
 	var sock = ch.open()
 	sock.onmessage = function(msg) {
 		var cmd = JSON.parse(msg.data)

@@ -8,10 +8,10 @@
         <div id="chatLog"></div>
 		<input id="chatBox">
         <div class="error"></div>
+        <input type="hidden" id="token" value="{{.Token}}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="/_ah/channel/jsapi"></script>
         <script>
-            var token = '{{.Token}}';
             var roomId = '{{.RoomId}}';
             var email = '{{.User.Email}}';
         </script>
